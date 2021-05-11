@@ -28,4 +28,5 @@ COPY install-packages.sh .
 RUN chmod +x ./install-packages.sh
 RUN ./install-packages.sh
 
+COPY requirements.txt .
 RUN pip install -r ./requirements.txt
