@@ -1,0 +1,1 @@
+# MediaGrabber Base Docker Image
