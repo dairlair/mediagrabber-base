@@ -28,5 +28,8 @@ COPY install-packages.sh .
 RUN chmod +x ./install-packages.sh
 RUN ./install-packages.sh
 
+# Testing tools
+RUN pip install flake8 pytest pytest-cov
+
 COPY requirements.txt .
 RUN pip install -r ./requirements.txt
