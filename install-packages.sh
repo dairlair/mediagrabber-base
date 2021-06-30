@@ -17,13 +17,15 @@ apt-get update
 apt-get -y upgrade
 
 # Install a new package, without unnecessary recommended packages:
-apt-get -y install --no-install-recommends libgl1-mesa-glx libglib2.0-0 ffmpeg wget
+apt-get -y install --no-install-recommends libgl1-mesa-glx libglib2.0-0 ffmpeg wget aria2
 
-# We need the latest version of youtube-dl:
+# We need the latest version of youtube-dl and yt-dlp:
 wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 chmod a+rx /usr/local/bin/youtube-dl
 hash -r
-youtube-dl --version
+sudo wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
+youtube-dl --version yt-dlp --version
 
 # Delete cached files we don't need anymore:
 apt-get clean
