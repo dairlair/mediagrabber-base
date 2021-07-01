@@ -26,7 +26,9 @@ hash -r
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
 chmod a+rx /usr/local/bin/yt-dlp
 
+echo "Youtube-DL version:"
 youtube-dl --version
+echo "Yt-DLP version:"
 yt-dlp --version
 
 # Delete cached files we don't need anymore:
