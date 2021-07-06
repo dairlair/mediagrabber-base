@@ -30,7 +30,7 @@ RUN ./install-packages.sh
 
 COPY aria2c /usr/bin/aria2c
 RUN chmod +x /usr/bin/aria2c
-RUN echo "Aria2c version:" && aria2c --version
+RUN echo "Aria2c version:" && /usr/bin/aria2c --version
 
 # Testing tools
 RUN pip install flake8 pytest pytest-cov
