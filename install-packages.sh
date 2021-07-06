@@ -30,6 +30,8 @@ echo "Youtube-DL version:"
 youtube-dl --version
 echo "Yt-DLP version:"
 yt-dlp --version
+echo "Aria2c version:"
+aria2 --version
 
 # Delete cached files we don't need anymore:
 apt-get clean
