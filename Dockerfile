@@ -24,12 +24,12 @@ RUN apt-get -y update && \
     zip \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
-COPY install-packages.sh .
-RUN chmod +x ./install-packages.sh
-RUN ./install-packages.sh
+# COPY install-packages.sh .
+# RUN chmod +x ./install-packages.sh
+# RUN ./install-packages.sh
 
-# Testing tools
-RUN pip install flake8 pytest pytest-cov
+# # Testing tools
+# RUN pip install flake8 pytest pytest-cov
 
-COPY requirements.txt .
-RUN pip install -r ./requirements.txt
+# COPY requirements.txt .
+# RUN pip install -r ./requirements.txt
