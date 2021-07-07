@@ -13,9 +13,6 @@ export DEBIAN_FRONTEND=noninteractive
 # Update the package listing, so we know what package exist:
 apt-get update
 
-# Install security updates:
-apt-get -y upgrade
-
 # Install a new package, without unnecessary recommended packages:
 apt-get -y install --no-install-recommends libgl1-mesa-glx libglib2.0-0 ffmpeg wget aria2
 
