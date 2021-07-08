@@ -26,7 +26,7 @@ hash -r
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
 chmod a+rx /usr/local/bin/yt-dlp
 
-wget http://http.us.debian.org/debian/pool/main/a/aria2/aria2_1.35.0-3_amd64.deb aria2_1.35.0-3_amd64.deb
+wget http://http.us.debian.org/debian/pool/main/a/aria2/aria2_1.35.0-3_amd64.deb -O aria2_1.35.0-3_amd64.deb
 dpkg -i aria2_1.35.0-3_amd64.deb
 
 echo "Youtube-DL version:"
