@@ -26,7 +26,7 @@ hash -r
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
 chmod a+rx /usr/local/bin/yt-dlp
 
-apt-get -y install --no-install-recommends libgcc-s1
+apt-get -y install --no-install-recommends libgcc1
 wget http://http.us.debian.org/debian/pool/main/a/aria2/libaria2-0_1.35.0-3_amd64.deb -O libaria2-0_1.35.0-3_amd64.deb
 dpkg -i libaria2-0_1.35.0-3_amd64.deb
 wget http://http.us.debian.org/debian/pool/main/a/aria2/aria2_1.35.0-3_amd64.deb -O aria2_1.35.0-3_amd64.deb
