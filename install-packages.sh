@@ -17,7 +17,7 @@ apt-get update
 apt-get -y upgrade
 
 # Install a new package, without unnecessary recommended packages:
-apt-get -y install --no-install-recommends libgl1-mesa-glx libglib2.0-0 ffmpeg wget aria2
+apt-get -y install --no-install-recommends libgl1-mesa-glx libglib2.0-0 ffmpeg wget
 
 # We need the latest version of youtube-dl and yt-dlp:
 wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
@@ -25,6 +25,9 @@ chmod a+rx /usr/local/bin/youtube-dl
 hash -r
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
 chmod a+rx /usr/local/bin/yt-dlp
+
+wget http://http.us.debian.org/debian/pool/main/a/aria2/aria2_1.35.0-3_amd64.deb aria2_1.35.0-3_amd64.deb
+dpkg -i aria2_1.35.0-3_amd64.deb
 
 echo "Youtube-DL version:"
 youtube-dl --version
