@@ -26,7 +26,12 @@ hash -r
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
 chmod a+rx /usr/local/bin/yt-dlp
 
-apt-get -y install --no-install-recommends libgcc1
+# Aria2 installation
+apt-get -y install --no-install-recommends libc-ares2 libc6 libgnutls30
+wget http://http.us.debian.org/debian/pool/main/n/nettle/libnettle8_3.7.3-1_amd64.deb -O libnettle8_3.7.3-1_amd64.deb
+dpkg -i libnettle8_3.7.3-1_amd64.deb
+wget http://http.us.debian.org/debian/pool/main/g/gcc-10/libgcc-s1_10.2.1-6_amd64.deb -O libgcc-s1_10.2.1-6_amd64.deb
+dpkg -i libgcc-s1_10.2.1-6_amd64.deb
 wget http://http.us.debian.org/debian/pool/main/a/aria2/libaria2-0_1.35.0-3_amd64.deb -O libaria2-0_1.35.0-3_amd64.deb
 dpkg -i libaria2-0_1.35.0-3_amd64.deb
 wget http://http.us.debian.org/debian/pool/main/a/aria2/aria2_1.35.0-3_amd64.deb -O aria2_1.35.0-3_amd64.deb
