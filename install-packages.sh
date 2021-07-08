@@ -27,7 +27,11 @@ wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/lo
 chmod a+rx /usr/local/bin/yt-dlp
 
 # Aria2 installation
-apt-get -y install --no-install-recommends libc-ares2 libc6 libgnutls30
+apt-get -y install --no-install-recommends libc-ares2
+wget http://http.us.debian.org/debian/pool/main/g/gnutls28/libgnutls30_3.7.1-5_amd64.deb -O libgnutls30_3.7.1-5_amd64.deb
+dpkg -i libgnutls30_3.7.1-5_amd64.deb
+wget http://http.us.debian.org/debian/pool/main/g/glibc/libc6_2.31-13_amd64.deb -O libc6_2.31-13_amd64.deb
+dpkg -i libc6_2.31-13_amd64.deb
 wget http://http.us.debian.org/debian/pool/main/n/nettle/libnettle8_3.7.3-1_amd64.deb -O libnettle8_3.7.3-1_amd64.deb
 dpkg -i libnettle8_3.7.3-1_amd64.deb
 wget http://http.us.debian.org/debian/pool/main/g/gcc-10/gcc-10-base_10.2.1-6_amd64.deb -O gcc-10-base_10.2.1-6_amd64.deb
