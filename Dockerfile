@@ -1,4 +1,6 @@
-FROM python:3.8
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -y update && \
     apt-get install -y --fix-missing \
@@ -18,11 +20,21 @@ RUN apt-get -y update && \
     liblapack-dev \
     libswscale-dev \
     pkg-config \
+    python3 \
+    python3-pip \
     python3-dev \
     python3-numpy \
     software-properties-common \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    ffmpeg \
+    wget \
+    aria2 \
     zip \
     && apt-get clean && rm -rf /tmp/* /var/tmp/*
+
+RUN which python3
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
 COPY install-packages.sh .
 RUN chmod +x ./install-packages.sh
