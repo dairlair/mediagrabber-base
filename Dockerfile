@@ -45,3 +45,6 @@ RUN pip install flake8 pytest pytest-cov
 
 COPY requirements.txt .
 RUN pip install -r ./requirements.txt
+
+COPY test.py .
+RUN python test.py
